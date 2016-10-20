@@ -9,6 +9,7 @@
  * Number 'its_number'
  * Decimal 'its_decimal'
  * 
+ *
  */
 
 $(document).ready(function(){

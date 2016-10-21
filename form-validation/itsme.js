@@ -113,7 +113,7 @@ $(document).ready(function(){
 //validation for decimal no
     $(document).on('keypress','.its_decimal',function(e){
         var value1=$(this).val();
-        var count=value1.match(/\./g).length;
+        var count=(value1.match(/\./g) || []).length;
         if(count<1){
             if(!(e.which==46)&&!(e.ctrlKey && e.which==97)&&!(e.ctrlKey && e.which==99)&&!(e.ctrlKey && e.which==118)&&!(e.ctrlKey && e.which==120)
                     &&!(e.which>47 && e.which<58)&&!(e.key==='Tab')&&!(e.key==='Delete')&&!(e.which==8)&&!(e.which==0)){

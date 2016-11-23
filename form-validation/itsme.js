@@ -1,8 +1,8 @@
 /**
  * Form Validation
  * Use class name to apply validation.
- * allow charecter without space 'its_name'
- * allow charecter with space  'its_character'
+ * allow character without space 'its_name'
+ * allow character with space  'its_character'
  * allow alphanumeric charachter 'its_alphanumeric'
  * Mobile 'its_mobile'
  * Email 'its_email'

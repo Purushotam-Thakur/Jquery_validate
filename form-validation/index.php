@@ -35,6 +35,8 @@
                 <input class="form-control its_name" title="f_name" type="f_name" id="f_name" name="f_name"><br/>
                 <label for="name">Character:</label>
                 <input class="form-control its_character" title="Character" type="text" id="character" name="character"><br/>
+                <label for="mobile">AlphaNumeric:</label>
+                <input class="form-control its_alphanumeric" title="AlphaNumeric" type="text" id="alphanumeric" name="alphanumeric"><br/>
                 <label for="mobile">Mobile:</label>
                 <input class="form-control its_mobile" type="text" name="mobile" id="mobile" maxlength="10"><br/>
                 <label for="email">Email:</label>

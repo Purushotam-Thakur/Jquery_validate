@@ -3,6 +3,7 @@
  * Use class name to apply validation.
  * allow charecter without space 'its_name'
  * allow charecter with space  'its_character'
+ * allow alphanumeric charachter 'its_alphanumeric'
  * Mobile 'its_mobile'
  * Email 'its_email'
  * Date(DD-MM-YYYY) 'its_date'
@@ -24,7 +25,7 @@ $(document).ready(function(){
     
     $(document).on('change','.its_name',function(){
         var character=$(this).val();
-        var re='/^[a-zA-Z]*$/';
+        var re=/^[a-zA-Z]*$/;
         if(!re.test(character)){
             $(this).val('');
         }
@@ -40,11 +41,29 @@ $(document).ready(function(){
     
     $(document).on('change','.its_character',function(){
         var character=$(this).val();
-        var re='/^[a-zA-Z][a-zA-Z\s]*$/';
+        var re=/^[a-zA-Z][a-zA-Z\s]*$/;
         if(!re.test(character)){
             $(this).val('');
         }
     }); 
+    
+    
+    //validation of Alphanumeric
+    $(document).on('keypress','.its_alphanumeric',function(e){
+        if(!(e.ctrlKey && e.which==97)&&!(e.ctrlKey && e.which==99)&&!(e.ctrlKey && e.which==118)&&!(e.ctrlKey && e.which==120)&&!(e.which==0)
+                &&!(e.which>96 && e.which<123)&&!(e.which>47 && e.which<58)&&!(e.which>64 && e.which<91)&&!(e.which==32)&&!(e.key==='Tab')&&!(e.key==='Delete')&&!(e.which==8)){
+            return false;
+        }
+    });
+    
+    $(document).on('change','.its_alphanumeric',function(){
+        var alphanumeric=$(this).val();
+        var re=/^[0-9a-zA-Z][0-9a-zA-Z\s]*$/;
+        if(!re.test(alphanumeric)){
+            $(this).val('');
+        }
+    }); 
+    
     
 //mobile no validation which will start from 7,8,9;
     $(document).on('keypress','.its_mobile',function(e){
@@ -104,7 +123,7 @@ $(document).ready(function(){
     
     $(document).on('change','.its_number',function(){
         var number=$(this).val();
-            var re='/^[0-9]*$/';
+            var re=/^[0-9]*$/;
             if(!re.test(number)){
                 $(this).val('');
             }
